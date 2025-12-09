@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>روز مادر مبارک</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- بارش گل‌ها، قلب‌ها، پروانه‌ها -->
+<div class="fall-container"></div>
+
+<!-- کارت زیبا -->
+<div class="card">
+
+    <!-- عکس مامان -->
+    <div class="image-box">
+        <img src="mom.jpg" alt="مامان عزیزم">
+    </div>
+
+    <h1 class="title">مامان مهربونم 🌸</h1>
+
+    <p class="text">
+        تو آرامشِ قلب منی…  
+        تو زیباترین اتفاق زندگی منی…  
+        لبخندت خورشیدِ خانه‌مونه…  
+        مامان جان، روزت هزار بار مبارک ❤️✨  
+    </p>
+
+    <div class="glow-heart"></div>
+
+    <!-- موزیک آنلاین -->
+    <audio controls>
+        <source src="https://dl7.download1music.ir/Music/2020/Aron%20Afshar/Aron%20Afshar%20-%20Madar%20128.mp3?src=download1" type="audio/mpeg">
+        مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
+    </audio>
+
+    <!-- امضا -->
+    <p class="signature">ساخته شده با عشق توسط محدثه 💖</p>
+
+</div>
+
+<!-- ⭐ اسکریپت بارش عناصر ⭐ -->
+<script>
+function createFallingItem() {
+    const item = document.createElement("img");
+
+    const items = ["download.jpg", "b.png.jpg", "h.png.jpg"];
+    item.src = items[Math.floor(Math.random() * items.length)];
+
+    item.className = "falling";
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.animationDuration = (4 + Math.random() * 5) + "s";
+    item.style.opacity = (0.6 + Math.random() * 0.4);
+
+    document.querySelector(".fall-container").appendChild(item);
+
+    setTimeout(() => item.remove(), 8000);
+}
+
+setInterval(createFallingItem, 300);
+</script>
+
+</body>
+</html>
